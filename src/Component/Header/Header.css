@@ -1,0 +1,18 @@
+nav ul{
+  margin-left: 580px;
+}
+ul li{
+  list-style-type: none;
+  display:inline;
+
+}
+ul li a{
+  text-decoration: none;
+  padding:10px 20px;
+  color:rgb(97, 68, 31);
+  font-weight:bold;
+
+}
+.header{
+  display:flex;
+}
