@@ -1,14 +1,14 @@
 import React from 'react';
-import Cart from './Component/Cart/Cart';
+import Card from './Component/Card';
 import Header from './Component/Header/Header';
-import Product from './Component/Product/Product';
+
 
 
 function App() {
   return (
     <div className="App">
-     <Header></Header>
-      <Cart></Cart>
+      <Header/>
+      <Card/>
     </div>
   );
 }
