@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Card from './Card';
 
-interface IContact{
+interface IProduct{
     name: string;
     email: string;
 }
 const Cards = () => {
-    const [card, setCard] = useState<IContact>({
+    const [card, setCard] = useState<IProduct>({
         name: "",
         email: ""
     });
-    const [contactList, setContactList] = useState<IContact[]>([])
+    const [contactList, setContactList] = useState<IProduct[]>([])
 
     const onClick = () => {
         setContactList([...contactList, card])
@@ -22,11 +22,6 @@ const Cards = () => {
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>  {
         setCard({ ...card, [e.target.name]:  e.target.value})
-    }
-    
-    const handleRemove = (email: string) => {
-        const newContactList = contactList.filter(c => c.email !== email)
-        setContactList(newContactList)
     }
 
     return (
@@ -50,7 +45,7 @@ const Cards = () => {
                 <button onClick={onClick}>Add</button>
             </div>
             {
-                contactList.map((contact) => <Card key={contact.name} name={contact.name} email={contact.email} handleRemove={handleRemove}  />)
+                contactList.map((contact) => <Card key={contact.name} name={contact.name} email={contact.email}  />)
             }
         </div>
     );

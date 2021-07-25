@@ -3,10 +3,9 @@ import React from 'react';
 interface IProps{
     name: string;
     email: string;
-    handleRemove: (email: string) => void
 }
 
-const Card = ({name, email, handleRemove} : IProps) => {
+const Card = ({name, email} : IProps) => {
     return (
         <div>
                <p>
@@ -15,7 +14,7 @@ const Card = ({name, email, handleRemove} : IProps) => {
             <p>
                 <strong>Email:</strong> {email}
             </p>
-            <button onClick={() => handleRemove(email)}>Remove</button> 
+
         </div>
     );
 };
